@@ -1,15 +1,11 @@
 <template>
-  <div>
-    Dashboard.vue
-  </div>
+    <v-container fluid>
+        <v-card> Col </v-card>
+    </v-container>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
