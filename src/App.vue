@@ -32,7 +32,11 @@
                         prepend-icon="mdi-star"
                         title="Starred"
                         value="starred"
-                    ></v-list-item>
+                    >
+                        <router-link to="/grid-list-page"
+                            >GridListPage</router-link
+                        >
+                    </v-list-item>
                 </v-list>
             </v-navigation-drawer>
 

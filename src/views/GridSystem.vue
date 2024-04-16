@@ -1,8 +1,8 @@
 <template>
     <v-container fluid>
         <v-card class="pa-3">
-            <v-row dense>
-                <v-col>
+            <v-row dense justify="end">
+                <v-col cols="auto">
                     <v-card class="pa-3" outlined>col </v-card>
                 </v-col>
                 <v-col>

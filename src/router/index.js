@@ -1,25 +1,33 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
-  {
-    path: '/',
-    name: 'Dashboard',
-    component: () => import(/* webpackChunkName: "about" */ '../views/DashBoard.vue')
-  },
-  {
-    path: '/grid-system',
-    name: 'GridSystem',
-    component: () => import(/* webpackChunkName: "about" */ '../views/GridSystem.vue')
-  }
-]
+    {
+        path: "/",
+        name: "Dashboard",
+        component: () =>
+            import(/* webpackChunkName: "about" */ "../views/DashBoard.vue"),
+    },
+    {
+        path: "/grid-system",
+        name: "GridSystem",
+        component: () =>
+            import(/* webpackChunkName: "about" */ "../views/GridSystem.vue"),
+    },
+    {
+        path: "/grid-list-page",
+        name: "GridListPage",
+        component: () =>
+            import(/* webpackChunkName: "about" */ "../views/GridListPage.vue"),
+    },
+];
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
-})
+    mode: "history",
+    base: process.env.BASE_URL,
+    routes,
+});
 
-export default router
+export default router;
