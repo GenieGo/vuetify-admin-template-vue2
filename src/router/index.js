@@ -22,6 +22,11 @@ const routes = [
         component: () =>
             import(/* webpackChunkName: "about" */ "../views/GridListPage.vue"),
     },
+    {
+        path: "/breakpoint",
+        name: "Breakpoint",
+        component: () => import("../views/Breakpoints.vue"),
+    },
 ];
 
 const router = new VueRouter({

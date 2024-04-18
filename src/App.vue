@@ -37,6 +37,13 @@
                             >GridListPage</router-link
                         >
                     </v-list-item>
+                    <v-list-item
+                        prepend-icon="mdi-star"
+                        title="Starred"
+                        value="starred"
+                    >
+                        <router-link to="/breakpoint">BreakPoints</router-link>
+                    </v-list-item>
                 </v-list>
             </v-navigation-drawer>
 
