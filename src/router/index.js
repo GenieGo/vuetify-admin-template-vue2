@@ -27,6 +27,11 @@ const routes = [
         name: "Breakpoint",
         component: () => import("../views/Breakpoints.vue"),
     },
+    {
+        path: "/typography",
+        name: "Typography",
+        component: () => import("../views/Typography.vue"),
+    },
 ];
 
 const router = new VueRouter({

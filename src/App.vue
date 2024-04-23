@@ -13,36 +13,20 @@
 
                 <v-divider></v-divider>
 
-                <v-list density="compact" nav>
+                <v-list
+                    v-for="item in items"
+                    :key="item.title"
+                    density="compact"
+                    nav
+                >
                     <v-list-item
                         prepend-icon="mdi-folder"
                         title="My Files"
                         value="myfiles"
                     >
-                        <router-link to="/"> home </router-link>
-                    </v-list-item>
-                    <v-list-item
-                        prepend-icon="mdi-account-multiple"
-                        title="Shared with me"
-                        value="shared"
-                    >
-                        <router-link to="/grid-system">GridSystem</router-link>
-                    </v-list-item>
-                    <v-list-item
-                        prepend-icon="mdi-star"
-                        title="Starred"
-                        value="starred"
-                    >
-                        <router-link to="/grid-list-page"
-                            >GridListPage</router-link
-                        >
-                    </v-list-item>
-                    <v-list-item
-                        prepend-icon="mdi-star"
-                        title="Starred"
-                        value="starred"
-                    >
-                        <router-link to="/breakpoint">BreakPoints</router-link>
+                        <router-link :to="item.to">
+                            {{ item.title }}
+                        </router-link>
                     </v-list-item>
                 </v-list>
             </v-navigation-drawer>
@@ -63,6 +47,17 @@ export default {
     data: () => ({
         // drawer: false
         //
+        items: [
+            { title: "Dashboard", icon: "mdi-image", to: "/" },
+            { title: "Grid system", icon: "mdi-image", to: "/grid-system" },
+            { title: "Breakpoints", icon: "mdi-image", to: "/breakpoints" },
+            {
+                title: "Grid List Page",
+                icon: "mdi-image",
+                to: "/grid-list-page",
+            },
+            { title: "Typography", icon: "mdi-image", to: "/typography" },
+        ],
     }),
 };
 </script>
